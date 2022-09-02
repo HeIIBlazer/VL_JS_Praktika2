@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Javascript IF-ELSE</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>JavaScript IF-ELSE</h1>
+        <h2>Простая математика - сложение</h2>
+        
+        <script>
+            //Задание - 1. Создать 2 случайных числа
+            //2. Посчитать сумму
+            //3. Спросить у пользователя сумму чисел
+            //4. Проверить и сообщить результат проверки
+
+            var number1,number2,summa,answerUser;
+
+            number1 = parseInt(Math.random()*11);//случайное число 1 0-10
+            number2 = parseInt(Math.random()*11);//случайное число 2 0-10
+            summa=number1+number2;//cчитай правильный ответ
+            //-------------------------
+            answerUser=prompt('Посчитай!\n'+number1+'+'+number2+'=?');  
+            //проверка ответа
+            if(summa==answerUser){
+                var text = number1+'+'+number2+'='+'<span style="color:green; font-weight:bold">'+ summa +'</span> Молодец!'; 
+            }else{
+                var text = number1+'+'+number2+'='+answerUser+' (<span style="color:red; font-weight:bold">'+ summa +'</span>) НЕВЕРНЫЙ ОТВЕТ!'; 
+            }
+            //Вывод на страницу
+            document.write(text);
+            
+        </script>
+
+    </body>
+</html>
